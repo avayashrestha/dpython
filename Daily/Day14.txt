@@ -1,0 +1,24 @@
+🎯 Day 14: Subdomain Discovery + Output Storage
+Agent Avaya reporting for deeper recon... 🕵️‍♂️
+
+🧠 Today's Intel: Why Save Outputs?
+In real hacking missions, you don’t just print results — you store them for analysis, automation, or reporting.
+
+Today you’ll learn how to:
+
+Loop through subdomains
+
+Simulate which ones are “active”
+
+Save only active ones into a file
+
+
+
+
+🔧 Concept You’ll Use Today:
+python
+
+
+with open("found.txt", "w") as file:
+    file.write("data")
+with open(...) is the safest way to handle files. It auto-closes when done.

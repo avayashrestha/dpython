@@ -1,0 +1,63 @@
+Day 2: Data Types + Mini Project
+1. Basic Data Types
+# String (text)
+name = "Neo"
+
+# Integer (whole number)
+age = 21
+
+# Float (decimal)
+speed = 3.14
+
+# Boolean (True or False)
+is_online = True
+You can check the type using:
+
+
+print(type(name))  # <class 'str'>
+
+
+2. Type Conversion
+age = int("21")        # Convert string to int
+pi = float("3.14")     # String to float
+text = str(123)        # Int to string
+Why it matters? Input from users is always string, so you'll often convert types.
+
+
+3. Lists (Store multiple items)
+python
+Copy code
+targets = ["192.168.0.1", "10.0.0.1", "scanme.nmap.org"]
+print(targets[0])       # Access first item
+targets.append("localhost")  # Add more targets
+4. Dictionaries (Key-Value Pairs)
+python
+Copy code
+target_info = {
+    "ip": "192.168.0.1",
+    "port": 80,
+    "is_open": True
+}
+print(target_info["ip"])
+Used a lot in hacking to store data from scans, users, results, etc.
+
+Mini Project: Target Info Collector
+python
+Copy code
+# Ask user for target info
+ip = input("Enter target IP: ")
+port = int(input("Enter target port: "))
+service = input("Enter service running on this port: ")
+
+# Store in a dictionary
+target = {
+    "ip": ip,
+    "port": port,
+    "service": service
+}
+
+# Print target info
+print("\nTarget Info:")
+print(f"IP Address: {target['ip']}")
+print(f"Port: {target['port']}")
+print(f"Service: {target['service']}")

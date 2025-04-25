@@ -1,0 +1,35 @@
+🧠 PART 1: Username List
+A list of usernames is called a userlist — it’s used just like a password wordlist.
+
+python
+usernames = ["admin", "user", "guest", "root"]
+
+
+
+🔁 PART 2: Brute Force Loop
+You can combine usernames and passwords using nested loops to test all combinations:
+
+python
+for user in usernames:
+    for pwd in passwords:
+        print(f"Trying {user}:{pwd}")
+🔐 This simulates a real brute force attack — it tries every username with every password.
+
+
+
+✅ PART 3: Check for a Match
+You can simulate a login system like this:
+
+python
+correct_user = "admin"
+correct_pass = "letmein"
+
+for user in usernames:
+    for pwd in passwords:
+        if user == correct_user and pwd == correct_pass:
+            print(f"Access Granted for {user}")
+            break
+
+
+
+💥 BONUS: You can ask the user to input the correct username and password and simulate the brute force trying to "guess" it.

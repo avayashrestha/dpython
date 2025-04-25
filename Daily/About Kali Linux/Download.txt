@@ -1,0 +1,149 @@
+🧰 Install All Major Kali Linux Tools
+Run these in your terminal (preferably with sudo or as root).
+Make sure your Kali is updated before installing:
+
+bash
+Copy
+Edit
+sudo apt update && sudo apt upgrade -y
+
+
+🔍 Reconnaissance Tools
+bash
+Copy
+Edit
+sudo apt install nmap -y
+sudo apt install theharvester -y
+sudo apt install recon-ng -y
+
+
+🛰️ Scanning & Enumeration Tools
+bash
+Copy
+Edit
+sudo apt install netdiscover -y
+sudo apt install enum4linux -y
+sudo apt install nikto -y
+
+
+💣 Exploitation Tools
+✅ Already pre-installed in most Kali installs:
+
+bash
+Copy
+Edit
+sudo apt install metasploit-framework -y
+sudo apt install sqlmap -y
+sudo apt install beef-xss -y
+
+
+To start Metasploit:
+
+bash
+Copy
+Edit
+msfconsole
+
+
+📶 Wireless Hacking Tools
+bash
+Copy
+Edit
+sudo apt install aircrack-ng -y
+🧬 Sniffing & MITM Tools
+bash
+Copy
+Edit
+sudo apt install wireshark -y
+sudo apt install ettercap-graphical -y
+
+
+🔓 Password Attacks
+bash
+Copy
+Edit
+sudo apt install hydra -y
+sudo apt install john -y
+
+
+🧠 OSINT (Public Data Search)
+bash
+Copy
+Edit
+sudo apt install phoneinfoga -y
+
+
+Sherlock (GitHub tool):
+
+bash
+Copy
+Edit
+sudo apt install python3-pip -y
+pip install gitpython
+git clone https://github.com/sherlock-project/sherlock.git
+cd sherlock
+python3 sherlock.py username
+
+
+
+🧪 Web App Hacking
+bash
+Copy
+Edit
+sudo apt install dirb -y
+
+
+
+Burp Suite is already on Kali. To launch:
+
+bash
+Copy
+Edit
+burpsuite
+⚙️ Privilege Escalation
+
+
+
+LinPEAS:
+
+bash
+Copy
+Edit
+git clone https://github.com/carlospolop/PEASS-ng.git
+cd PEASS-ng/linPEAS
+chmod +x linpeas.sh
+
+
+
+🔁 Reverse Shells
+Netcat is already installed:
+
+bash
+Copy
+Edit
+nc -lvnp 4444
+
+
+
+📦 File Transfer & Forensics
+bash
+Copy
+Edit
+sudo apt install autopsy -y
+Python3 server (already installed):
+
+bash
+Copy
+Edit
+python3 -m http.server 8080
+✅ Pro Tips
+Use which toolname to check if a tool is already installed.
+
+Use man toolname or toolname --help to learn usage.
+
+Create folders for tools like:
+
+bash
+Copy
+Edit
+mkdir ~/Tools && cd ~/Tools

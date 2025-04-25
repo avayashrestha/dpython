@@ -1,0 +1,73 @@
+🧠 What You’ll Learn
+for and while loops
+
+Looping through lists
+
+Building a password brute-forcer
+
+🔁 1. FOR Loop
+Used when looping over a list or range:
+
+python
+passwords = ["1234", "admin", "letmein"]
+
+for pwd in passwords:
+    print("Trying password:", pwd)
+
+
+
+🔁 2. WHILE Loop
+# Used when you want to repeat until a condition is met:
+
+python
+attempts = 0
+while attempts < 5:
+    print("Hacking attempt:", attempts)
+    attempts += 1
+🛠️ Mini Project: Password Cracker Simulator
+python
+Copy code
+# Simulated correct password (in real life, this would be unknown)
+correct_password = "toor"
+
+# List of common passwords
+wordlist = ["1234", "admin", "root", "toor", "letmein"]
+
+# Brute force loop
+for pwd in wordlist:
+    print(f"Trying password: {pwd}")
+    if pwd == correct_password:
+        print("💥 Password cracked! ->", pwd)
+        break
+else:
+    print("❌ Password not found in wordlist.")
+🔍 Explanation:
+for pwd in wordlist: goes through each password
+
+If it matches, break ends the loop
+
+The else under the loop runs if no match was found
+
+
+
+⚠️ Hacking Tip:
+In real ethical hacking, you'd use tools like Hydra, Medusa, or Python’s requests module to brute force login forms, FTP, SSH, etc.
+But this kind of logic is the core behind those tools.
+
+
+
+🔥 Bonus Challenge:
+Make the correct_password a user input (simulate target login)
+
+Ask the user to enter their own wordlist
+
+Track how many attempts were made
+
+✅ What You’ve Learned So Far:
+✅ Variables
+✅ Data types
+✅ Dictionaries
+✅ Conditionals
+✅ Loops
+✅ Brute force simulation
+

@@ -1,0 +1,60 @@
+🔍 Day 3: if / elif / else + Logic
+✅ 1. if / else Basics
+port = 22
+
+if port == 22:
+    print("Port 22 is for SSH.")
+else:
+    print("Not SSH.")
+
+
+✅ 2. elif (else if)
+port = 80
+
+if port == 22:
+    print("SSH")
+elif port == 80:
+    print("HTTP")
+elif port == 443:
+    print("HTTPS")
+else:
+    print("Unknown port")
+
+
+✅ 3. Comparison Operators
+Operator	Meaning	        Example
+==	        Equal	        a == b
+!=	        Not equal	    a != b
+>	        Greater than	a > b
+<	        Less than	    a < b
+>=	        Greater or eq.	a >= b
+<=	        Less or eq.	    a <= b
+
+
+✅ 4. Logical Operators
+# AND
+if port == 22 and status == "open":
+    print("SSH is open!")
+
+# OR
+if port == 22 or port == 23:
+    print("Telnet or SSH")
+
+# NOT
+if not is_secure:
+    print("This port is vulnerable!")
+
+
+
+🛠️ Mini Project: Port Status Checker
+port = int(input("Enter port number: "))
+status = input("Is the port open or closed? ").lower()
+
+if port == 22 and status == "open":
+    print("SSH is open. Secure access possible.")
+elif port == 21 and status == "open":
+    print("FTP is open. Might be exploitable.")
+elif port == 80 and status == "open":
+    print("HTTP is open. Check for websites.")
+else:
+    print("Either the port is closed or uncommon.")

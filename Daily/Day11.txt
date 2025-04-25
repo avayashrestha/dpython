@@ -1,0 +1,49 @@
+🎯 Day 11: Reading Files Like a Spy
+🕵️ Agent Avaya, you're now stepping into the realm of data extraction — reading from files to gather intel. In real-world hacking, this is how wordlists, config files, and scan logs are used.
+
+🧠 What You’ll Learn Today:
+How to read files
+
+Loop through each line
+
+Filter or search for targets
+
+Display results like a pro
+
+
+
+🔍 PART 1: Read a File
+python
+with open("target.txt", "r") as file:
+    data = file.read()
+    print(data)
+🧠 This opens the file and prints everything in it.
+
+
+
+🔁 PART 2: Loop Through Lines
+python
+with open("target.txt", "r") as file:
+    for line in file:
+        print("Found:", line.strip())
+🔐 line.strip() removes newlines for clean output.
+
+
+
+🔎 PART 3: Search for a Target
+python
+target_ip = "192.168.0.1"
+with open("target.txt", "r") as file:
+    for line in file:
+        if target_ip in line:
+            print(f"✅ Found target IP: {target_ip}")
+            break
+    else:
+        print("❌ Target IP not found.")
+
+
+🚀 Bonus: Read & Count Targets
+python
+with open("target.txt", "r") as file:
+    targets = file.readlines()
+    print(f"Total targets found: {len(targets)}")

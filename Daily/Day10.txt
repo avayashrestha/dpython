@@ -1,0 +1,27 @@
+🧠 PART 1: Writing to a File
+python
+Copy code
+file = open("targets.txt", "w")
+file.write("192.168.0.1\n")
+file.write("10.0.0.5\n")
+file.close()
+📌 "w" = write mode (it will overwrite if the file already exists)
+
+🧠 PART 2: Reading from a File
+python
+Copy code
+file = open("targets.txt", "r")
+targets = file.readlines()
+for target in targets:
+    print(f"Pinging {target.strip()}...")
+file.close()
+📌 "r" = read mode
+📌 .strip() removes the \n newline
+
+🧠 PART 3: Append New Info (Log Style)
+python
+Copy code
+file = open("log.txt", "a")
+file.write("New user logged: admin\n")
+file.close()
+📌 "a" = append mode (adds to the file without deleting old content)

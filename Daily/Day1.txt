@@ -1,0 +1,38 @@
+Day 1: Printing, Variables & Comments
+1. PRINT
+python
+Copy code
+print("Hello, Hacker!")
+
+
+2. VARIABLES
+name = "Avaya"
+age = 18
+is_hacker = True
+
+print("Name:", name)
+print("Is hacker:", is_hacker)
+
+
+3. COMMENTS
+# This is a comment
+# Comments help explain your code
+Mini Project: Custom Hacking Intro Tool
+
+
+Code:
+# Hacking welcome tool
+
+name = input("Enter your name, agent: ")
+print("Welcome to the Cyber Realm,", name)
+
+tool = input("What's your favorite hacking tool? ")
+print(f"Ah, {tool}! A fine choice for elite hackers.")
+
+
+# What it teaches:
+Inputs/outputs
+
+f-strings (for formatting)
+
+Basic interaction

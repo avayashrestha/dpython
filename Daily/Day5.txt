@@ -1,0 +1,91 @@
+🧠 Why Functions Matter in Hacking:
+💡 Break complex tools into simple pieces
+
+🔁 Reuse code (no copy-paste madness)
+
+🔍 Organize your recon, brute force, scanning into separate modules
+
+🔐 All real hacking tools use functions behind the scenes
+
+
+
+
+🔧 1. Defining a Function
+python
+def greet_user():
+    print("Welcome, agent.")
+Call it by name:
+
+python
+greet_user()
+
+
+
+🔑 2. Function with Parameters
+python
+def scan_port(port):
+    print(f"Scanning port {port}...")
+Call it:
+
+python
+scan_port(22)
+
+
+
+🔁 3. Return Values
+python
+def double(x):
+    return x * 2
+
+result = double(5)
+print(result)
+
+
+
+🛠️ Mini Project: Modular Target Recon Tool
+python
+def get_target_info():
+    ip = input("Enter target IP: ")
+    domain = input("Enter domain: ")
+    return ip, domain
+
+def check_port(port):
+    if port == 22:
+        return "SSH"
+    elif port == 80:
+        return "HTTP"
+    else:
+        return "Unknown Service"
+
+def show_summary(ip, domain, port, service):
+    print("\n📡 Target Recon Summary:")
+    print(f"IP: {ip}")
+    print(f"Domain: {domain}")
+    print(f"Port: {port} ({service})")
+
+# Use the functions
+ip, domain = get_target_info()
+port = int(input("Enter port: "))
+service = check_port(port)
+show_summary(ip, domain, port, service)
+
+
+
+
+✅ Challenge (Optional):
+Add a function that checks if the port is open or closed
+
+Make it return a message like "Port is open" or "Port is closed"
+
+
+
+🔥 Recap:
+You now know how to:
+
+Create & call functions
+
+Pass data around
+
+Return results
+
+Build toolkits like a pro

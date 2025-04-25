@@ -1,0 +1,38 @@
+🧠 Why Error Handling?
+Let’s say your tool asks for a port number, and someone enters "eighty" instead of 80.
+Without error handling — boom! 💥 Your program crashes.
+
+We fix that with a try / except block.
+
+🛠️ Key Concepts:
+✅ try: Try something that might cause an error
+⚠️ except: Catch the error and respond nicely
+➕ else and finally (for advanced flow)
+🚨 Example (Without try/except — this crashes):
+
+python
+port = int(input("Enter port number: "))  # Crashes if input is not a number
+
+
+
+✅ With try/except:
+
+python
+try:
+    port = int(input("Enter port number: "))
+    print(f"Port {port} accepted.")
+except ValueError:
+    print("Invalid input! Please enter a number.")
+🧠 ValueError is the error Python gives if it can’t convert text to an integer.
+
+
+
+🔁 Bonus: Loop Until User Gets It Right
+
+python
+while True:
+    try:
+        port = int(input("Enter port number: "))
+        break
+    except ValueError:
+        print("❌ Not a number! Try again.")

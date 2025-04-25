@@ -1,0 +1,22 @@
+🧠 Day 13: Subdomains & Basic Recon
+🎯 Why It Matters:
+Hackers often start by gathering more info about the target, like subdomains (e.g., admin.example.com, mail.example.com) to discover entry points.
+
+🔧 Today You’ll Learn:
+How to store a list of subdomains
+
+Loop through and generate full URLs
+
+Print recon results like a pro
+
+
+
+🔍 Example Concepts:
+python
+
+domain = "example.com"
+subdomains = ["admin", "mail", "dev", "login"]
+
+for sub in subdomains:
+    full_url = f"{sub}.{domain}"
+    print("Checking:", full_url)

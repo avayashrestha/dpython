@@ -1,0 +1,39 @@
+🔐 Day 7: Lists, Loops & Wordlists
+🎯 Why It Matters:
+In hacking, you often:
+
+Scan lists of IPs
+
+Try multiple passwords
+
+Loop through usernames, ports, services...
+
+So today, you're learning how to:
+
+Create a list
+
+Loop through it
+
+Check for matches (like a wordlist attack)
+
+
+🧠 PART 1: Lists
+A list is like a bag of items.
+python
+tools = ["nmap", "wireshark", "hydra", "burpsuite"]
+print(tools[0])  # Outputs: nmap
+
+
+🔁 PART 2: Loop Through a List
+python
+for tool in tools:
+    print(f"Using {tool} for recon...")
+This is how brute force works — one item at a time.
+
+
+
+🔎 PART 3: Check if Item Exists
+python
+passwords = ["admin", "123456", "letmein"]
+if "123456" in passwords:
+    print("Weak password detected!")

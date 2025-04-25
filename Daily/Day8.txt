@@ -1,0 +1,55 @@
+🔐 Day 8: Port Scanning & Dictionary Matching
+🎯 Why It Matters:
+In real-world recon and enumeration, port scanning helps hackers identify:
+
+What services are running (like SSH, HTTP)
+
+Which ports are open or suspicious
+
+Targets for exploitation
+
+Today, you're learning how to:
+
+Handle multiple inputs (lists of ports)
+
+Use dictionaries to map ports to services
+
+Use loops to scan and match ports
+
+
+
+🧠 PART 1: Getting the Target IP
+python
+target_ip = input("Enter the target IP: ")
+Simple input — just like real tools (like Nmap) require a target.
+
+
+
+🧠 PART 2: List of Ports (Using Split)
+python
+ports_input = input("Enter ports to scan (separated by commas): ")
+ports = [int(port.strip()) for port in ports_input.split(",")]
+You learned .split(",") — this grabs a list from a single input line!
+
+
+
+🧠 PART 3: Port-Service Dictionary
+python
+services = {
+    21: "FTP",
+    22: "SSH",
+    23: "Telnet",
+    80: "HTTP",
+    443: "HTTPS",
+    3306: "MySQL"
+}
+Just like a hacking toolkit — you have a lookup table to know what’s running where.
+
+
+
+🧠 PART 4: Simulate the Scan (Using a Loop)
+python
+for port in ports:
+    service = services.get(port, "Unknown service")
+    print(f"Scanning {target_ip} on port {port}... Possible service: {service}")
+This mimics a basic scan — each port is “probed,” and the service is revealed if it matches.

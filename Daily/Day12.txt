@@ -1,0 +1,40 @@
+🎯 Day 12: File Writing, IP Filtering & Threat Logging
+Welcome back, Agent Avaya. Today’s mission: detect, log, and escalate threats found in your target list. 💻🔎
+
+
+
+💾 PART 1: Writing to Files
+Let’s say you want to store any suspicious IPs in a file called threats.txt.
+
+python
+with open("threats.txt", "a") as file:
+    file.write("Suspicious IP found: 8.8.8.8\n")
+This appends a line to the file instead of overwriting it.
+
+
+
+🔍 PART 2: IP Pattern Detection
+You can look for specific patterns in IPs. For example:
+
+python
+if ip.startswith("192."):
+    print("🔐 Private network IP detected!")
+
+
+
+Or detect known suspicious IPs:
+
+python
+blacklist = ["8.8.8.8", "1.1.1.1"]
+if ip in blacklist:
+    print("⚠️ Blacklisted IP detected!")
+🗃 PART 3: Full Workflow (What You’ll Do Today)
+Your Day 12 Mission will involve:
+
+Reading from a file (target.txt)
+
+Scanning each IP
+
+Checking if it’s private or blacklisted
+
+Logging suspicious ones into threats.txt
